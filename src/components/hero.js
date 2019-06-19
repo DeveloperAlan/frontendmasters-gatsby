@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 
-const ImageBackground = styled('BackgroundImage')`
+const ImageBackground = styled(BackgroundImage)`
     background-image: url('/images/sydney.jpg');
     background-position: top 20% center;
     background-size: cover;
@@ -54,14 +54,14 @@ const Hero = () => {
         }
     `)
     return (
-        <BackgroundImage Tag="section" fluid={image.sharp.fluid} fadeIn="soft">
+        <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn="soft">
             <TextBox>
                 <h1>Frontend Masters + Gatsby &hearts;</h1>
                 <p>
                     Hello Sydney <Link to="/about/">Learn about me &rarr;</Link>
                 </p>
             </TextBox>
-        </BackgroundImage>
+        </ImageBackground>
     );
 };
 
